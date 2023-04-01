@@ -1,0 +1,16 @@
+header{background-color: #ffd285;
+       color: black;
+  
+}
+body { background-image: url("fondo.jpg");
+     font-family: Georgia, serif;
+    }
+footer {
+  font-size:large;
+  background-color: #ffd285;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: black;
+}
