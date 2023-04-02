@@ -32,19 +32,18 @@
     <form action="{{url_for('login')}}" method="POST">
         
   <div class="nameInsert" align="center">
-    <label>Nombre de usuario:</label>
+    <label>Email:</label>
   </div>
   <br>
     <input align="center" required type="text" id="nombre" name="nombre">
 <br>
 <br>
 
-  <div align="center" class="passInsert"><label>Contraseña:</label></div><br>
+  <div align="center" class="passInsert" id="contra"><label>Contraseña:</label></div><br>
     <input align="center" required type="password" id="contra" name="contra">
     <br>    
     <br>
-    <button align="center" class="boton-personalizado-2" type="submit">Ingresar</button>
-      
+    <button align="center" class="boton-personalizado-2" type="submit" >Ingresar</button>
       <br>
     <br>
     {%if error == True%}
@@ -59,7 +58,7 @@
    <footer>
     <p align="center">Berzzotti-Bolaños-Curti-Teplizky </p>
   </footer>
-  <script src='/static/inicio.js'></script>
+  <script src='/static/front.js'></script>
 </html>
 
 <!--style="display:none;"-->
