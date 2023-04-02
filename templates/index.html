@@ -7,8 +7,9 @@
     <div class="col">
     </div>
     <div class="col" align="center">
-      <h1>Vivi</h1>
-      <p font-size="small" align="left">Encuentra tu vivienda</p>
+      <div class="col" align="center">
+        <img   src="./static/img/vivi.png" height="120px">
+      </div>
     </div>
     <div class="col" align="left">
      <img  style="position: relative;top:5px" src="./static/img/logo.png" width="90px">
@@ -25,19 +26,27 @@
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/index.css')}}">
   <base href="/">
 </head>
-<body >  
+<body>  
+   <br>
    <br>
   <br>
     <div  align="center"> 
     <form action="{{url_for('login')}}" method="GET">
-    <button type="submit" class="btn-light">Login</button>
+    <button type="submit" class="boton-personalizado-2 ">Ingresar</button>
        </form>
     </div>
   <br>
   <div  align="center"> 
      <form action="{{url_for('crearUsuario')}}" method="GET">
-    <button class="btn-light" type="submit">Registrar</button>
+    <button class="boton-personalizado-2 " type="submit">Registrar</button>
     </form>
+  </div>
+  <br>
+  <div  align="center"> 
+     <form action="{{url_for('mudanza')}}" method="GET">
+    <button class="boton-personalizado-2 " type="submit">Me mudo!</button>
+    </form>
+  </div>
 </body>
   <footer>
     <p align="center">Berzzotti-Bolaños-Curti-Teplizky </p>

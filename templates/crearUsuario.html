@@ -7,11 +7,12 @@
     <div class="col">
     </div>
     <div class="col" align="center">
-      <h1>Vivi</h1>
-      <p font-size="small" align="left">Encuentra tu vivienda</p>
+      <div class="col" align="center">
+        <img   src="./static/img/vivi.png" height="120px">
+      </div>
     </div>
     <div class="col" align="left">
-     <img  style="position: relative;top:15px" src="./static/img/logo.png" width="70px">
+     <img  style="position: relative;top:5px" src="./static/img/logo.png" width="90px">
     </div>
     <div class="col" align="right">
     </div>
@@ -24,32 +25,31 @@
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/index.css')}}">
     </head>
     <body>
-        <H1> Ingresa tus datos</H1>
-        <div class="tablaRegistro">
+        <div align="center"class="tablaRegistro">
 
             <form action="{{url_for('crearUsuario')}}" method="POST">
             <div class="User">
-            <label for="nombre"> Nombre </label> <br>
-            <input required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
-               <label for="nombre"> Apellido </label> <br>
-            <input required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
+            <labelalign="center" for="nombre"> Nombre </label> <br>
+            <input align="center"required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
+               <labelalign="center" for="nombre"> Apellido </label> <br>
+            <input align="center"required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
             <br>
             </div>
- <label for="nombre"> Mail </label> <br>
-            <input required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
-            <div class="Contra">
-            <label>Contraseña: </label><br>
-            <input required type="password" id="contra" name="contra" class="insert" class="contraseña"><br>
+ <label align="center"for="nombre"> Mail </label> <br>
+            <input align="center"required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
+            <div align="center"class="Contra">
+            <labelalign="center">Contraseña: </label><br>
+            <input align="center"required type="password" id="contra" name="contra" class="insert" class="contraseña"><br>
             <br>
             </div>
 
-            <div class="Contra2">
-            <label>Confirma tu contraseña: </label><br>
-            <input required type="password" id="contra2" name="contra2" class="insert" class="contraseña2"><br> 
+            <div align="center"class="Contra2">
+            <labelalign="center">Confirma tu contraseña: </label><br>
+            <input align="center"required type="password" id="contra2" name="contra2" class="insert" class="contraseña2"><br> 
             </div>    
             <br>
 
-            <input  class="btn-outline-secondary" value="Confirmar registro" type="submit">
+            <input  onclick="agregarUsuario()" align="center"class="boton-personalizado-2" value="Confirmar registro" type="submit">
             {%if error1 == True%}
               <h3>Ese Usuario ya existe</h3>
             {%endif%}
@@ -58,11 +58,12 @@
             {%endif%}
             </form>
           <form action="{{url_for('menu')}}" method="GET">
-    <button class="btn-outline-secondary" type="submit">Volver</button>
+    <button align="center"class="boton-personalizado-2" type="submit">Volver</button>
       </form>
         </div>
     </body>
    <footer>
     <p align="center">Berzzotti-Bolaños-Curti-Teplizky </p>
   </footer>
+  <script src='/static/front.js'></script>
 </html>
