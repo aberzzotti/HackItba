@@ -26,10 +26,24 @@ footer {
   padding-left:150px;
   padding-right:150px;
   background-color:#FFD27D;
+  border-radius: 15px;
   }
+  .boton-personalizado-3 {
+    text-decoration:none;
+    font-weight:200;
+    font-size:15px;
+    color:black;
+    padding-top:15px;
+    padding-bottom:15px;
+    background-color:#FFD27D;
+    border-radius: 15px;
+    }
   label {
     font-size:large;
   }
   p {
     font-size:medium;
+  }
+  select {
+    font-size:xx-large;
   }
