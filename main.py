@@ -18,14 +18,14 @@ def index():
 def menu():
   return render_template('index.html')
 
-@app.route('/crearUsuario', methods=['GET', 'POST'])
-def crearUsuario():
-  if (request.method == "POST"):
-    session['usuario'] = str(request.form['nombre'])
-    return render_template("pagina.html")
-  else:
-    return render_template("crearUsuario.html")
+@app.route('/pagina', methods=['GET', 'POST'])
+def pagina():
+  return render_template("pagina.html")
 
+
+@app.route('/user', methods=['POST'])
+def user():
+  return render_template("pagina.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -36,22 +36,15 @@ def login():
   else:
     return render_template("login.html")
 
+@app.route('/crearUsuario', methods=['GET', 'POST'])
+def crearUsuario():
+  if (request.method == "POST"):
+    session['usuario'] = str(request.form['nombre'])
+    print(session['usuario'])
+    return render_template("pagina.html")
+  else:
+    return render_template("crearUsuario.html")
 
-@app.route('/pagina', methods=['GET', 'POST'])
-def pagina():
-  return render_template("pagina.html")
-
-
-@app.route('/barrios', methods=['GET'])
-def barrios():
-
-  return "HOLA"
-
-@app.route('/user', methods=['POST'])
-def user():
- 
-
-  return render_template("pagina.html")
 
 @app.route('/mail', methods=['POST'])
 def mail():
