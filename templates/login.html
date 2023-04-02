@@ -43,16 +43,40 @@
     <input align="center" required type="password" id="contra" name="contra">
     <br>    
     <br>
-    <button align="center" class="boton-personalizado-2" type="submit" >Ingresar</button>
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <form align="center" action="{{url_for('menu')}}" method="GET">
+          <button align="center" class="boton-personalizado-3" type="submit">Volver</button>
+            </form>
+      </div>
+      <div class="col">
+        <button align="center" class="boton-personalizado-3" type="submit" >Ingresar</button>
+        <br>
       <br>
-    <br>
-    {%if error == True%}
-        <h3>Ese usuario no existe</h3>
-      {%endif%}
+      {%if error == True%}
+          <h3>Ese usuario no existe</h3>
+        {%endif%}
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+    </div>
+   
     </form>
-  <form align="center" action="{{url_for('menu')}}" method="GET">
-    <button align="center" class="boton-personalizado-2" type="submit">Volver</button>
-      </form>
+
 </div>
 </body>
    <footer>

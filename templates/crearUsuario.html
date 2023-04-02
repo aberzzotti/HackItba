@@ -30,12 +30,12 @@
             <form action="{{url_for('crearUsuario')}}" method="POST">
             <div class="User">
             <labelalign="center" for="nombre"> Nombre </label> <br>
-            <input align="center"required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
+            <input align="center"required type="text"class="insert"> <br>
                <labelalign="center" for="nombre"> Apellido </label> <br>
-            <input align="center"required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
+            <input align="center"required type="text"  class="insert"> <br>
             <br>
             </div>
- <label align="center"for="nombre"> Mail </label> <br>
+            <label align="center"for="nombre"> Mail </label> <br>
             <input align="center"required type="text" id="nombre" name="nombre" class="insert" class="nombre"> <br>
             <div align="center"class="Contra">
             <labelalign="center">Contraseña: </label><br>
@@ -49,7 +49,7 @@
             </div>    
             <br>
 
-            <input  onclick="agregarUsuario()" align="center"class="boton-personalizado-2" value="Confirmar registro" type="submit">
+            <input  align="center"class="boton-personalizado-2" value="Registrar" type="submit">
             {%if error1 == True%}
               <h3>Ese Usuario ya existe</h3>
             {%endif%}
