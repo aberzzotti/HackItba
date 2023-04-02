@@ -11,7 +11,7 @@ from email.message import EmailMessage
 def sendEmail(email_subject, receiver_email_address, result, user):
     message = EmailMessage()
 
-    sender_email_address = "vivi.enda@outlook.com"
+    sender_email_address = "vivi_enda@outlook.com"
     email_password = "vivienda123" 
     
     # Configure email headers 
