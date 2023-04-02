@@ -3,7 +3,10 @@ import urllib.request
 import re
 
 def scrapingClarinProp(cantAmb, barrio, precioMin, precioMax):
-    url = "https://www.inmuebles.clarin.com/departamento-alquiler-barrio-" + str(barrio) +"-localidad-capital-federal-" + str(cantAmb) + "-ambientes-" + str(precioMin) +"-" + str(precioMax) +"-pesos"
+    if cantAmb == 1:
+       url = "https://www.inmuebles.clarin.com/departamento-alquiler-barrio-" + str(barrio) +"-localidad-capital-federal-" + str(cantAmb) + "-ambiente-" + str(precioMin) +"-" + str(precioMax) +"-pesos"
+    else:
+       url = "https://www.inmuebles.clarin.com/departamento-alquiler-barrio-" + str(barrio) +"-localidad-capital-federal-" + str(cantAmb) + "-ambientes-" + str(precioMin) +"-" + str(precioMax) +"-pesos"
     print(url)
     response = urllib.request.urlopen(url)
     html_content = response.read().decode('utf-8')

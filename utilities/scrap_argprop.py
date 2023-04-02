@@ -3,7 +3,10 @@ import urllib.request
 import re
 
 def scrapingArgenProp(cantAmb, barrio, precioMin, precioMax):
-    url = "https://www.argenprop.com/departamento-alquiler-barrio-" + str(barrio).replace(" ","-") + "-"+ str(cantAmb) + "-ambientes-"+str(precioMin)+"-"+str(precioMax)+"-pesos"
+    if cantAmb =='1':
+        url = "https://www.argenprop.com/departamento-alquiler-barrio-" + str(barrio).replace(" ","-") + "-"+ str(cantAmb) + "-ambiente-"+str(precioMin)+"-"+str(precioMax)+"-pesos"
+    else:
+        url = "https://www.argenprop.com/departamento-alquiler-barrio-" + str(barrio).replace(" ","-") + "-"+ str(cantAmb) + "-ambientes-"+str(precioMin)+"-"+str(precioMax)+"-pesos"
     print(url)
     
     response = urllib.request.urlopen(url)    
@@ -18,5 +21,3 @@ def scrapingArgenProp(cantAmb, barrio, precioMin, precioMax):
 
     links = new_list
     return links
-
-scrapingArgenProp(2, "Villa Crespo", 10, 10000000)
