@@ -1,6 +1,10 @@
 import MySQLdb
 from flask import Flask, render_template, request
 
+from utilities.mail import sendEmail
+from utilities.scrap_argprop import scrapingArgenProp
+from utilities.scrap_clarinprop import scrapingClarinProp
+from utilities.properati import properatiWebScraping
 app = Flask(__name__)
 
 
@@ -13,6 +17,10 @@ def index():
 def menu():
   return render_template('index.html')
 
+
+@app.route('/mudanza')
+def mudanza():
+  return render_template('mudanza.html')
 
 @app.route('/crearUsuario', methods=['GET', 'POST'])
 def crearUsuario():
@@ -37,16 +45,28 @@ def pagina():
 
 @app.route('/barrios', methods=['GET'])
 def barrios():
-  host = "186.18.137.196"
-  user = "DB_2020_5BINF_G02",
-  password = "marsela1234",
-  database = "DB_2020_5BINF_G02"
-  datos = [host, user, password, database]
-  conn = MySQLdb.connect(*datos)  # Conectar a la base de datos
-  cursor = conn.cursor()  # Crear un cursor
-  cursor.execute("Select * from barrio")  # Ejecutar una consulta
-  data = cursor.fetchall()
-  return data
+
+  return "HOLA"
+
+@app.route('/mail', methods=['POST'])
+def mail():
+    cantAmb = str(request.form["cant"])
+    barrio = request.form["barrio"]
+    precioMin = str(request.form["min"])
+    precioMax = str(request.form["max"])
+    email = "tomasacurti@gmail.com"
+    user = "Antonella" + " " + "Berzzotti"
+    resultsProperati = properatiWebScraping(cantAmb, precioMin, precioMax, barrio)
+    resultsArgen = scrapingArgenProp(cantAmb, barrio, precioMin, precioMax)
+    resultsClarin = scrapingClarinProp(cantAmb, barrio, precioMin, precioMax)
+    results = resultsProperati + resultsArgen + resultsClarin
+    print(results)
+    try:
+        if len(results)>0:
+            sendEmail("Alquileres disponibles!", email, results, user )
+    except Exception as ex:
+        print(ex)
+    return "hola"
 
 
 app.run(host='0.0.0.0', port=8000)
