@@ -4,7 +4,7 @@ Buenos dias,
 
 Este es el readme de la web Vivi. 
 Vivi es una web que, mediante una busqueda inteligente, encontrará tu vivienda más rapido y mas facil
-La idea principal del proyecto es presentar un MVP de lo que podria llegar a ser esta app que te mantiene informado de todos los alquileres que cumplen con los criterios que necesitas, ya no sos vos buscando un alquiler sino que el alquiler te busca a vos con Vivi.
+La idea principal del proyecto es presentar un MVP de lo que podria llegar a ser esta app que te mantiene informado de todos los alquileres que cumplen con los criterios que necesitas, ya no sos vos buscando un alquiler sino que el alquiler te busca a vos con Vivi. Fue desarrollada por el grupo de Antonella Berzzotti, Cecilia Bolaños, Tomas Curti y Gonzalo Teplizky.
 
 ## Cosas a tener a encuenta para el correcto funcionamiento de la app
 
@@ -20,7 +20,7 @@ La idea principal del proyecto es presentar un MVP de lo que podria llegar a ser
   $pip install requests
   $pip install flask
 
-3. Correr el programa.
+3. Correr el programa. ($python main.py)
 
 4. Copiar http://127.0.0.1:8000 y luego pegarlo en el buscador.
 
