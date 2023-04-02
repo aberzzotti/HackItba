@@ -8,9 +8,17 @@ La idea principal del proyecto es presentar un MVP de lo que podria llegar a ser
 
 ## Cosas a tener a encuenta para el correcto funcionamiento de la app
 
-1. Es necesario que esto se corra en Linux o en un entorno virtual ya que usamos el paquete de flask el cual no se puede correr en Windows :(
+1. Es necesario que esto se corra en Linux o en un entorno virtual (detallado en el proximo paso) ya que usamos el paquete de flask el cual no se puede correr en Windows :(
 
-2. $pip install -r requirements.txt
+2.$cd hackitba-main
+  $py -m pip install --upgrade pip
+  $py -m pip install --user virtualenv
+  $py -m venv env
+  $.\env\Scripts\activate
+  $pip install -r requirements.txt
+  $pip install pandas
+  $pip install requests
+  $pip install flask
 
 3. Correr el programa.
 
